@@ -15,20 +15,24 @@ Create a new repository for python_essential_1
 """
 
 for index in range(3):
+
     first_name = input("Please Enter Your First Name ")
 
     last_name = input("Please Enter Your Last Name ")
 
-    age = input("Please Enter Your Age ")
+    age = None
 
-     # age = int(age_str)
-    total_employee_age = (int(age) + int(age) + int(age))
+    while age == None:
+        age = input("Please Enter Your Age ")
+       # age = int(age_str)
     if int(age) > 17 and int(age) < 101:
         print(first_name +" " + last_name +" "+ age)
-    elif total_employee_age < 501:
+    else:
+        continue
+
+    total_employee_age = (int(age) + int(age) + int(age))
+    if total_employee_age <= 500:
 
         print(f"The toal age of all the employees are {total_employee_age}")
     else:
-            break
-
-
+        break
