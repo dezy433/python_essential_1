@@ -11,10 +11,9 @@ Create a new repository for python_essential_1
 - You should calculate the sum of ages of all employees. If the total sum is more than 500, print a message that tell us the result, otherwise just finish the app
 - All printing and input should use a clear and readable syntax
 - All variables should have meaningful names
-
 """
 
-for index in range(3):
+for index in range(1):
 
     first_name = input("Please Enter Your First Name ")
 
@@ -29,8 +28,39 @@ for index in range(3):
         print(first_name +" " + last_name +" "+ age)
     else:
         continue
+    for index in range(1):
 
-    total_employee_age = (int(age) + int(age) + int(age))
+        first_name = input("Please Enter Your First Name ")
+
+        last_name = input("Please Enter Your Last Name ")
+
+        age2 = None
+
+        while age2 == None:
+            age2 = input("Please Enter Your Age ")
+        # age = int(age_str)
+        if int(age2) > 17 and int(age2) < 101:
+            print(first_name + " " + last_name + " " + age2)
+        else:
+            continue
+
+    for index in range(1):
+
+        first_name = input("Please Enter Your First Name ")
+
+        last_name = input("Please Enter Your Last Name ")
+
+        age3 = None
+
+        while age3 == None:
+            age3 = input("Please Enter Your Age ")
+        # age = int(age_str)
+        if int(age3) > 17 and int(age3) < 101:
+            print(first_name + " " + last_name + " " + age3)
+        else:
+            continue
+
+    total_employee_age = (int(age) + int(age2) + int(age3))
     if total_employee_age <= 500:
 
         print(f"The toal age of all the employees are {total_employee_age}")
