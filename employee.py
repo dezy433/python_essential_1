@@ -12,57 +12,31 @@ Create a new repository for python_essential_1
 - All printing and input should use a clear and readable syntax
 - All variables should have meaningful names
 """
+employee_count = input("How many employees do you wish to add ")
+employee_names= []
+employee_age = []
 
-for index in range(1):
-
-    first_name = input("Please Enter Your First Name ")
-
-    last_name = input("Please Enter Your Last Name ")
-
-    age = None
-
-    while age == None:
-        age = input("Please Enter Your Age ")
-       # age = int(age_str)
-    if int(age) > 17 and int(age) < 101:
-        print(first_name +" " + last_name +" "+ age)
-    else:
-        continue
-    for index in range(1):
-
+for index in range(int(employee_count)):
+    first_name =""
+    last_name = ""
+    age = 0
+    while first_name.strip()=="":
         first_name = input("Please Enter Your First Name ")
-
+    while last_name.strip()=="":
         last_name = input("Please Enter Your Last Name ")
 
-        age2 = None
+    while age < 18 or age > 100:
+        age = int(input("Please Enter Your Age "))
 
-        while age2 == None:
-            age2 = input("Please Enter Your Age ")
-        # age = int(age_str)
-        if int(age2) > 17 and int(age2) < 101:
-            print(first_name + " " + last_name + " " + age2)
-        else:
-            continue
+        employee_names.append(first_name +" "+ last_name)
+        employee_age.append(age)
 
-    for index in range(1):
 
-        first_name = input("Please Enter Your First Name ")
+for index in range(int(employee_count)):
+    print (employee_names[index] +" " + str(employee_age[index]))
 
-        last_name = input("Please Enter Your Last Name ")
+if sum(employee_age) > 500:
+    print("Add of all employee ages " + str(sum(employee_age)))
 
-        age3 = None
 
-        while age3 == None:
-            age3 = input("Please Enter Your Age ")
-        # age = int(age_str)
-        if int(age3) > 17 and int(age3) < 101:
-            print(first_name + " " + last_name + " " + age3)
-        else:
-            continue
 
-    total_employee_age = (int(age) + int(age2) + int(age3))
-    if total_employee_age <= 500:
-
-        print(f"The toal age of all the employees are {total_employee_age}")
-    else:
-        break
